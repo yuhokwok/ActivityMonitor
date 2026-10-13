@@ -1,0 +1,39 @@
+{
+  "batteryHigh": {
+    "frames": 360,
+    "first": "batteryHigh_00030.png",
+    "last": "batteryHigh_00389.png",
+    "fps": 30
+  },
+  "batteryHighFloatUp": {
+    "frames": 31,
+    "first": "batteryHighFloatUp_00000.png",
+    "last": "batteryHighFloatUp_00030.png",
+    "fps": 30
+  },
+  "batteryLow": {
+    "frames": 360,
+    "first": "batteryLow_00030.png",
+    "last": "batteryLow_00389.png",
+    "fps": 30
+  },
+  "batteryLowFloatUp": {
+    "frames": 31,
+    "first": "batteryLowFloatUp_00000.png",
+    "last": "batteryLowFloatUp_00030.png",
+    "fps": 30
+  },
+  "batteryMedium": {
+    "frames": 360,
+    "first": "batteryMedium_00030.png",
+    "last": "batteryMedium_00389.png",
+    "fps": 30
+  },
+  "batteryMediumFloatUp": {
+    "frames": 31,
+    "first": "batteryMediumFloatUp_00000.png",
+    "last": "batteryMediumFloatUp_00030.png",
+    "fps": 30
+  }
+}
+PASS: all 1,173 original animation frames match bundled copies

@@ -1,0 +1,2 @@
+PASS: Sources/Resources/Localization: 127 keys, 4 locale sets match, all literal UI keys translated
+PASS: Widget: 33 keys, 4 locale sets match, all literal UI keys translated

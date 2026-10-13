@@ -1,0 +1,11 @@
+Sources/Resources/Localization/en.lproj/Localizable.strings: 137 unique keys
+Sources/Resources/Localization/ja.lproj/Localizable.strings: 137 unique keys
+Sources/Resources/Localization/zh-Hans.lproj/Localizable.strings: 137 unique keys
+Sources/Resources/Localization/zh-Hant.lproj/Localizable.strings: 137 unique keys
+All four locale key sets match.
+Widget/en.lproj/Localizable.strings: 47 unique keys
+Widget/ja.lproj/Localizable.strings: 47 unique keys
+Widget/zh-Hans.lproj/Localizable.strings: 47 unique keys
+Widget/zh-Hant.lproj/Localizable.strings: 47 unique keys
+All four widget locale key sets match.
+Literal UI key coverage passed using Scripts/verify-localizations.py.

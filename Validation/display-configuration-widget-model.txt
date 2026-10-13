@@ -1,0 +1,30 @@
+Home Widget model verification
+Source: Widget/MonitorHomeWidget.swift
+PASS: Provider requests a 30-minute reload interval
+PASS: Provider applies the interval using an after policy
+PASS: Timeline contains the captured sample and its stale fallback
+PASS: Sample is fresh at 3,599 seconds
+PASS: Sample becomes stale at 3,600 seconds
+PASS: Fallback is scheduled at the one-hour threshold
+PASS: Fallback retains the original capture timestamp
+PASS: Fallback is stale even when WidgetKit renders it early
+PASS: Fallback does not fabricate a new battery measurement
+PASS: Fallback does not fabricate a new thermal measurement
+PASS: Fallback does not fabricate a new storage measurement
+PASS: Real fallback remains a real captured sample
+PASS: Unavailable battery remains unavailable in the fallback
+PASS: Unavailable storage does not become zero usage
+PASS: Valid capacities produce the expected used bytes and fraction
+PASS: Partial storage data remains unavailable
+PASS: Negative available capacity is rejected
+PASS: Negative total capacity is rejected
+PASS: Available capacity above total is bounded
+PASS: Full storage reaches the upper bound
+PASS: Zero total capacity cannot divide by zero
+PASS: Gallery fixture is explicitly preview data
+PASS: Stale entry retains configured metric order
+PASS: Stale entry retains original system RAM sample
+PASS: Configured stale entry cannot imply a new capture
+PASS: Missing system RAM stays unavailable
+Swift model checks passed: 23
+RESULT: PASS

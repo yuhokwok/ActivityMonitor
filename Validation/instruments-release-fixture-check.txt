@@ -1,0 +1,3 @@
+--design-preview: absent from Release
+--battery-state: absent from Release
+--thermal-state: absent from Release

@@ -60,3 +60,19 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Local build and validation output
+.DS_Store
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+Validation/*.mp4
+
+.swiftpm/
+Validation/*.log
+Validation/*.xcresult/
+Validation/*.xctestproducts/
+
+# Authoring autosaves and duplicate design exports
+Resource/**/Adobe After Effects Auto-Save/

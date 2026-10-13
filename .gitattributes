@@ -1,0 +1,12 @@
+*.swift text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.strings text eol=lf
+*.png binary
+*.jpg binary
+*.psd binary
+*.ai binary
+*.aep binary
+*.mov binary
+*.zip binary
