@@ -45,6 +45,46 @@ See `Docs/PLAN.md` and `Validation/REPORT.md` for implementation checklist and a
 
 ## Modular development
 
+```mermaid
+flowchart TB
+    subgraph APP["iOS / iPadOS application"]
+        App["ActivityMonitorApp<br/>Composition and scene lifecycle"]
+        UI["Feature screens<br/>Dashboard · Details · History · Settings"]
+        Components["UI components and design system<br/>Gauges · Battery animation · Number transitions"]
+        Store["MonitorStore<br/>Sampling · History · CSV export"]
+        Controller["LiveActivityController<br/>Start · Update · End"]
+        App --> UI
+        App --> Store
+        App --> Controller
+        UI --> Components
+    end
+
+    subgraph WIDGET["Widget extension"]
+        Bundle["MonitorWidgetBundle"]
+        Home["Home Screen widget<br/>Configuration · Timeline · Presentation"]
+        Live["Live Activity views<br/>Lock Screen · Dynamic Island"]
+        Bundle --> Home
+        Bundle --> Live
+    end
+
+    subgraph KIT["Local Swift package: MonitorKit"]
+        Domain["MonitorDomain<br/>Snapshots · Statuses · Metric preferences"]
+        Telemetry["MonitorTelemetry<br/>Darwin system CPU / RAM sampler"]
+        Activity["MonitorActivity<br/>ActivityKit attributes and payload mapping"]
+        Activity --> Domain
+    end
+
+    UI --> Domain
+    Store --> Domain
+    Store --> Telemetry
+    Controller --> Activity
+    Home --> Domain
+    Home --> Telemetry
+    Live --> Activity
+```
+
+Arrows show composition or module usage. App services own foreground sampling and Live Activity updates; the Home Screen widget samples independently when iOS grants runtime. Shared package modules contain no view or scene lifecycle logic.
+
 The application and widget share a local Swift package with `MonitorDomain`, `MonitorTelemetry` and `MonitorActivity` products. Feature screens, reusable instruments and app lifecycle services are separated. See [Architecture](Docs/ARCHITECTURE.md) for module boundaries and data flow.
 
 After cloning, install XcodeGen (`brew install xcodegen`), run `xcodegen generate`, then open `ActivityMonitor.xcodeproj` and select the ActivityMonitor scheme. Select your development team before deploying to a physical device. The local package is included in this repository and requires no external package download.
