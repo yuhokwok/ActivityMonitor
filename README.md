@@ -1,6 +1,6 @@
 # Activity Monitor
 
-Native SwiftUI iPhone / iPad app, iOS 17+, with an ActivityKit Live Activity extension. Bundle identifier: `com.invivo.ios.Activity-Monitor`. No watchOS target.
+Native SwiftUI iPhone / iPad app, iOS 17+, with an ActivityKit Live Activity extension. No watchOS target.
 
 ## Open / build
 
@@ -88,3 +88,7 @@ Arrows show composition or module usage. App services own foreground sampling an
 The application and widget share a local Swift package with `MonitorDomain`, `MonitorTelemetry` and `MonitorActivity` products. Feature screens, reusable instruments and app lifecycle services are separated. See [Architecture](Docs/ARCHITECTURE.md) for module boundaries and data flow.
 
 After cloning, install XcodeGen (`brew install xcodegen`), run `xcodegen generate`, then open `ActivityMonitor.xcodeproj` and select the ActivityMonitor scheme. Select your development team before deploying to a physical device. The local package is included in this repository and requires no external package download.
+
+## Credits
+
+UI design by **KC Lui**.
